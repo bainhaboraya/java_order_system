@@ -1,7 +1,7 @@
 package com.order.order_system.service;
 
 import com.order.order_system.repository.BaseRepository;
-import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
@@ -11,10 +11,10 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
-@RequiredArgsConstructor
 public abstract class BaseService<T, ID> {
 
-    private final BaseRepository<T, ID> baseRepository;
+    @Autowired
+    private BaseRepository<T, ID> baseRepository;
 
     public T save(T entity) {
         return baseRepository.save(entity);
