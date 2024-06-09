@@ -1,14 +1,16 @@
 package com.order.order_system.dto;
+
 import lombok.Getter;
 import lombok.Setter;
-import jakarta.persistence.MappedSuperclass;
 
-@Setter
+import java.time.LocalDateTime;
+
 @Getter
-@MappedSuperclass
-
-public class BaseDto <ID extends Number>  {
-    private ID id;
-
-    private Integer statusCode;
+@Setter
+public class BaseDto<T> {
+    private T id;
+    private LocalDateTime createdDate;
+    private String createdUser;
+    private LocalDateTime modifiedDate;
+    private String modifiedUser;
 }

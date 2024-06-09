@@ -67,8 +67,4 @@ public abstract class BaseService<T, ID> {
     public void deleteAll() {
         baseRepository.deleteAll();
     }
-
-    public void updateStatus(ID id, Integer statusCode) {
-        baseRepository.updateStatus(id, statusCode);
-    }
 }

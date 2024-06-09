@@ -11,5 +11,12 @@ import lombok.Setter;
 @Table(name = "security_roles")
 public class Role extends BaseEntity<Long> {
     private String name;
+    private Integer statusCode;
+
+    public Role() {}
+
+    public Role(String name) {
+        this.name = name;
+    }
     
 }
