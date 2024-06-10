@@ -27,12 +27,12 @@ public class OrderController {
     public ResponseEntity<OrderDto> create(@RequestBody OrderDto orderDto) {
         Order order = orderMapper.toEntity(orderDto);
         orderService.insert(order);
-        // Start fulfillment in background after sending response
+        
         startFulfillment(order);
         return ResponseEntity.ok(orderMapper.toDTO(order));
     }
 
     private void startFulfillment(Order order) {
-        // Simulate background fulfillment logic here
+        
     }
 }
