@@ -1,0 +1,3 @@
+[submodule "client-side"]
+	path = client-side
+	url = https://github.com/bainhaboraya/java_order_system.git
