@@ -1,3 +1,6 @@
 [submodule "client-side"]
 	path = client-side
 	url = https://github.com/bainhaboraya/java_order_system.git
+[submodule "order-management-system"]
+	path = order-management-system
+	url = https://github.com/bainhaboraya/java_order_system/tree/main/client-side
